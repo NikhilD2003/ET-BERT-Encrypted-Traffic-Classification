@@ -1,0 +1,31 @@
+# ==========================================
+# ET-BERT Traffic Classification .gitignore
+# ==========================================
+
+# 1. Massive Machine Learning Models (300MB+)
+*.bin
+*.pt
+*.pth
+
+# 2. Specifically Ignore the Massive Training Array
+x_datagram_train.npy
+
+# 3. Raw Network Traffic Data
+# (In case someone downloads your GDrive data into the repo)
+*.pcap
+*.pcapng
+
+# 4. Jupyter Notebook & Python Caches
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 5. Virtual Environments
+venv/
+env/
+.env
+
+# 6. Operating System Junk Files
+.DS_Store
+Thumbs.db
