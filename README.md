@@ -19,6 +19,42 @@ While the [original ET-BERT repository](https://github.com/linwhitehat/ET-BERT) 
 
 **This repository bridges that gap.** It provides a complete, workable pipeline that implements the ET-BERT architecture on a real-world dataset. By treating raw, encrypted network bytes as "words" in a sequence, the model utilizes multi-head self-attention mechanisms to learn the structural grammar and behavioral fingerprint of different network applications. This allows the system to accurately classify 24 distinct families of malware and benign applications entirely from encrypted payloads, without requiring decryption keys.
 
+## 📁 External Data & Model Zoo
+
+Due to GitHub’s storage limitations, the high-volume binary files (PCAPs and Model Weights) are hosted externally. Depending on your goals, download the necessary components below:
+
+### 1. Raw Network Traffic (.pcap)
+To run the preprocessing pipeline (Phase 0 and Phase 1) and generate your own datasets, download the 24-class packet captures:
+* [**Download Raw PCAP Dataset**](https://drive.google.com/file/d/1AEDxZRAh8ClpiEYpuFU-5WMyd_YWVI-R/view?usp=sharing)
+    * *Includes: 24 individual application/malware captures.*
+
+---
+
+### 2. ET-BERT Model Weights
+We provide two versions of the model architecture depending on whether you wish to train from scratch or run immediate inference.
+
+| Resource | Purpose | Download Link |
+| :--- | :--- | :--- |
+| **Pre-trained Model** | **For Training:** Download this if you want to fine-tune the ET-BERT architecture on your own custom dataset or re-run my fine-tuning experiments. | [**Download Pre-trained Weights**](https://drive.google.com/file/d/1Zah1YSjT2SgDvi-YNR5CzOHkwGJiS9_W/view?usp=sharing) |
+| **Fine-tuned Model** | **For Inference:** Download this if you want to skip training and immediately deploy the model to classify live or captured network traffic. | [**Download Fine-tuned Weights**](https://drive.google.com/file/d/1LUaN4jnLA11ipAbqhBVm08Jf_w5dmExb/view?usp=sharing) |
+
+
+
+---
+
+### 🛠 Setup Instructions for Downloads
+After downloading the files, place them in the following directory structure to ensure the Jupyter Notebook paths work correctly:
+
+```text
+ET-BERT-Project/
+├── Data/
+│   └── (Place .pcap files here)
+├── Model/
+│   ├── pretrained_model.bin
+│   └── finetuned_model.bin
+└── ... (rest of the repo)
+```
+
 ## 2. About ET-BERT & Methodology
 ET-BERT pioneers a new paradigm by adapting the Transformer encoder architecture (originally designed for Natural Language Processing) to the cybersecurity domain. 
 
