@@ -7,9 +7,6 @@
 *.pt
 *.pth
 
-# 2. Specifically Ignore the Massive Training Array
-x_datagram_train.npy
-
 # 3. Raw Network Traffic Data
 # (In case someone downloads your GDrive data into the repo)
 *.pcap
