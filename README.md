@@ -55,6 +55,25 @@ ET-BERT-Project/
 └── ... (rest of the repo)
 ```
 
+## Requirements
+* Python >= 3.6
+* CUDA: 11.4
+* GPU: Tesla V100S
+* torch >= 1.1
+* six >= 1.12.0
+* scapy == 2.4.4
+* numpy == 1.19.2
+* shutil, random, json, pickle, binascii, flowcontainer
+* argparse
+* packaging
+* tshark
+* [SplitCap](https://www.netresec.com/?page=SplitCap)
+* [scikit-learn](https://scikit-learn.org/stable/)
+* For the mixed precision training you will need apex from NVIDIA
+* For the pre-trained model conversion (related with TensorFlow) you will need TensorFlow
+* For the tokenization with wordpiece model you will need [WordPiece](https://github.com/huggingface/tokenizers)
+* For the use of CRF in sequence labeling downstream task you will need [pytorch-crf](https://github.com/kmkurn/pytorch-crf)
+
 ## 2. About ET-BERT & Methodology
 ET-BERT pioneers a new paradigm by adapting the Transformer encoder architecture (originally designed for Natural Language Processing) to the cybersecurity domain. 
 
